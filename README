@@ -1,0 +1,24 @@
+注意PHP版本,5.3不支持,执行vendor/bin/doctrine orm:schema-tool:create会报错
+
+默认是sqlite
+
+配置支持PostgresSQL,在php.ini加上extension=php_pdo_pgsql.dll,否则会报找不到driver
+
+$conn = array(
+    'driver' => 'pdo_pgsql',
+    'path' => 'C:\Program Files (x86)\info2soft-ctrlcenter\PostgreSQL\8.3\bin\pgAdmin3.exe',
+    'dbname'=>'orm',
+    'user'=> 'i2soft',
+    'password'=>'xxx'
+);
+
+我用的git bash做测试的,windows command报找不到路径,可能是我的路径有空格。
+
+
+This is the code for the Doctrine 2 ORM tutorial.
+
+Last Update: Tutorial is now using Composer only
+
+You can find the tutorial at:
+
+https://doctrine-orm.readthedocs.org/en/latest/tutorials/getting-started.html
